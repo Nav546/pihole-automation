@@ -42,6 +42,8 @@ export PIHOLE_PASSWORD='your-password'                 # PowerShell: $env:PIHOLE
 
 Edit `config.yaml` if your Pi-hole is not at `http://localhost:8080`.
 
+![stats output](stats.png)
+
 ## Usage
 
 ```bash
