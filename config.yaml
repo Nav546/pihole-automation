@@ -1,0 +1,16 @@
+# Pi-hole automation config. The password is NOT stored here:
+#   export PIHOLE_PASSWORD='your-password'        (PowerShell: $env:PIHOLE_PASSWORD='...')
+
+pihole:
+  # Web UI port from your pihole-docker docker-compose.yml (8080 -> /admin)
+  base_url: http://localhost:8080
+
+# Lists to make sure exist in Pi-hole (python blocklists.py sync)
+blocklists:
+  - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+  - https://adaway.org/hosts.txt
+
+# Local DNS records, hostname: IP (python dns_records.py)
+dns_records:
+  nas.home.lab: 192.168.1.50
+  printer.home.lab: 192.168.1.60
